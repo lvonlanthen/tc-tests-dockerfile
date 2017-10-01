@@ -22,5 +22,5 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.d
 # Chromedriver for functional tests.
 RUN wget https://chromedriver.storage.googleapis.com/2.32/chromedriver_linux64.zip \
     && unzip chromedriver* \
-    && chmod +x chromedriver \
-    && mv chromedriver /usr/local/bin/chromedriver
+    && chmod +x chromedriver && chmod 777 chromedriver \
+    && mv chromedriver /usr/bin/chromedriver
